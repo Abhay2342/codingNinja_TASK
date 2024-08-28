@@ -1,0 +1,52 @@
+20240521	11:48:06	93b947ba-5003-4e55-871a-226163706a9d	Error: Not allowed by CORS	OPTIONS	/	https://www.google.com
+20240521	11:48:06	07ff2f6d-123e-4d91-a3ac-d74a2e780a14	Error: Not allowed by CORS	GET	/	https://www.google.com
+20240525	00:41:36	76e888bf-9a8b-4ae1-b481-6e445db192d3	SyntaxError: Expected double-quoted property name in JSON at position 33	POST	/auth	undefined
+20240823	22:27:10	0fbd8ed6-8454-40c6-bcda-386e04023c7f	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	POST	/api/auth/signup	undefined
+20240823	22:31:50	8f8a7df0-8012-42bf-9bbd-0c6d0c4b8800	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	POST	/api/auth/signup	undefined
+20240823	22:40:01	6e586c50-ba6b-48cb-9022-c70725c90c9e	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	POST	/api/auth/signup	undefined
+20240824	00:27:32	2b0079a3-ff98-425a-ab23-14e3fd89afe1	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240824	00:27:33	855a0dde-3b7e-4c0e-9394-ae28979ce99c	Error: Not allowed by CORS	GET	/api/tasks	http://localhost:4200
+20240824	00:28:22	59b8f922-5d90-4e7c-863f-2994c6e4d84a	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240824	00:28:22	85b5e130-ecde-4199-85f7-80b6a05ca8fb	Error: Not allowed by CORS	GET	/api/tasks	http://localhost:4200
+20240824	00:29:26	4cfcde50-96b2-4b68-ae11-9a86b42dcad2	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240824	00:29:27	a3072ffa-568a-4bc7-92b8-d0b16816bf14	Error: Not allowed by CORS	GET	/api/tasks	http://localhost:4200
+20240824	00:29:36	058aa01a-6fd3-43ec-8230-43c461cac67b	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240824	00:29:36	849e4e42-4c36-40cd-a8d1-9f0d8e41e426	Error: Not allowed by CORS	GET	/api/tasks	http://localhost:4200
+20240824	00:29:44	4037919b-d9e6-4625-a6cc-38d0275fffa1	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240824	00:29:44	0c924f4b-d081-4936-8463-de8089af70a7	Error: Not allowed by CORS	GET	/api/tasks	http://localhost:4200
+20240824	00:30:07	50ff4530-4dd4-4218-94d4-3fb854b3d6b4	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240824	00:30:07	b2a87e05-1bb5-4ae2-8914-4f0c6249234b	Error: Not allowed by CORS	GET	/api/tasks	http://localhost:4200
+20240828	15:51:39	a2b19bcc-9a8f-4f82-af70-521224ffbd2e	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240828	15:51:39	b65be700-b6ac-4972-bdbd-309ad9dd28d4	Error: Not allowed by CORS	GET	/api/tasks	http://localhost:4200
+20240828	16:12:53	62dd3110-835a-4944-8e3f-cb6f127ef38d	Error: Not allowed by CORS	OPTIONS	/api/auth/register	http://localhost:4200
+20240828	16:14:04	a6da9007-fb38-4d63-83b0-8688714bbf28	Error: Not allowed by CORS	OPTIONS	/api/auth/register	http://localhost:4200
+20240828	16:15:36	61854424-7b08-4d16-86a6-12e4c32b9c4b	Error: Not allowed by CORS	OPTIONS	/api/auth/register	http://localhost:4200
+20240828	16:17:03	680e3080-f47a-4181-b42e-65a89edca9ff	Error: Not allowed by CORS	OPTIONS	/api/auth/register	http://localhost:4200
+20240828	16:18:25	967912c9-2eed-4e63-be54-3ca89a3e51b6	Error: Not allowed by CORS	OPTIONS	/api/auth/register	http://localhost:4200
+20240828	16:20:29	15734db4-9543-4bdf-bcf1-2d8bf6a5ef5e	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	POST	/api/auth/signup	undefined
+20240828	16:21:27	d6496344-03ad-4443-9bca-2d3db497a976	Error: Not allowed by CORS	OPTIONS	/api/auth/register	http://localhost:4200
+20240828	16:22:39	9360f3a6-bf05-4207-873c-6743d90af053	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	POST	/api/auth/signup	undefined
+20240828	16:23:03	8f1d0a99-7ac2-41d3-a7e9-f1b40d96cf73	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	POST	/api/auth/signup	undefined
+20240828	16:23:19	a90d0e41-1920-44e4-a92e-3ee944d52863	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	POST	/api/auth/signup	undefined
+20240828	16:53:17	8da06389-4e34-421f-84a8-e7e0affbc7fc	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240828	16:53:18	11684271-44ce-4571-896d-249ffc93b4a5	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	16:53:20	a3d840cc-7092-4b5f-8a46-c0c536dfb38a	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240828	16:53:20	16e253e0-4994-4d9c-92f2-de8bb507cfed	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	17:06:38	71119631-90be-4854-9ce7-a7bc92648071	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240828	17:06:39	05e59f79-f3e7-4baa-8a2c-564830909e2e	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	17:20:41	6f9de91f-3b19-4d1c-9e95-9b64f6c98279	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	17:20:58	f658254f-60a2-41ed-a0a6-ab32f9cbcea9	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240828	17:20:58	d9833b56-eb7a-4a0e-95b6-452793a9df34	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	17:21:49	49957ca6-0ece-4b75-993e-8f6c5bffff89	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240828	17:21:49	6d8846b5-8638-4bf2-83c1-f014a981b8ec	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	17:46:07	0a8c63a7-481c-4b9f-99c3-0e20ba2d075c	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	17:51:07	3d5f4b57-ea17-4d50-bed6-ade08c212ae9	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240828	17:51:08	51970a93-8202-40c2-bc08-6d0d0537f064	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	17:52:09	f9d6181f-9f63-42c9-b0f1-f9d9cf2f93b2	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240828	17:52:10	73941c9b-6cd1-43ea-aaab-25218b5bdb68	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	17:52:28	6cba4ae0-dff9-4b1d-b501-5db27cd665ac	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	undefined
+20240828	17:52:28	d5766481-6b67-4fb0-9ddf-3bd3a5fe1534	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	17:52:48	8466dab3-ea57-4699-81a5-ab4b98f31e04	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/tasks	http://localhost:4200
+20240828	18:15:41	368fd65c-63ea-4530-8eec-b6df09e6226f	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/users/tasks	undefined
+20240828	18:18:10	219dbb18-ed44-4174-a94d-eeec2e2c8ef3	Error: ENOENT: no such file or directory, stat 'D:\Github\codingNinja_TASK\BackEnd\views\404.html'	GET	/api/users/tasks	undefined
+20240828	18:20:11	379a8bbd-b5ce-43c1-b871-143fe5fb5659	SyntaxError: Expected double-quoted property name in JSON at position 44	GET	/api/users/tasks	undefined
