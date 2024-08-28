@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:5000/api/auth';
+  private apiUrl = 'https://codingninja-task.onrender.com/api/auth';
   private readonly TOKEN_KEY = 'authToken';
   private readonly USER_KEY = 'userData';
 
