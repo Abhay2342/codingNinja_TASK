@@ -3,6 +3,7 @@ const allowedOrigins = [
   "http://localhost:4200",
   "https://codingninja-task.onrender.com",
   "https://coding-ninja-task-delta.vercel.app",
+  "https://coding-ninja-task-kzjg27ed5-abhay2342s-projects.vercel.app/",
 ];
 
 const corsOptions = {
