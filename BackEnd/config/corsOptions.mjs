@@ -1,4 +1,9 @@
-const allowedOrigins = ["http://localhost:5000", "http://localhost:4200"];
+const allowedOrigins = [
+  "http://localhost:5000",
+  "http://localhost:4200",
+  "https://codingninja-task.onrender.com",
+  "https://coding-ninja-task-delta.vercel.app",
+];
 
 const corsOptions = {
   origin: function (origin, callback) {
