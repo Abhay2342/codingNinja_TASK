@@ -42,7 +42,15 @@ export class LoginComponent {
       this.authService.login({ email, password }).subscribe({
         next: (response) => {
           console.log('Login successful', response);
-          this.router.navigate(['/task-manager']);
+          // Store user data in localStorage
+          const userData = {
+            id: response.id,
+            username: response.username,
+            email: response.email,
+            token: response.token
+          };
+          localStorage.setItem('userData', JSON.stringify(userData));
+          this.router.navigate(['/tasks']);
         },
         error: (err) => {
           console.error('Login error', err);

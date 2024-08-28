@@ -35,32 +35,39 @@ const getTasks = async (req, res) => {
 // @desc Create a new task
 // @route POST /tasks
 // @access Private
-const addTask = async (req, res) => {
+const addTask = asyncHandler(async (req, res) => {
   const { userEmail, title, description, dueDate, priority, status } = req.body;
 
+  // Validate that required fields are present
   if (!userEmail || !title || !description || !dueDate) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
+  // Find the user's task document or create one if it doesn't exist
   let userTasks = await Task.findOne({ userEmail });
 
   if (!userTasks) {
-    // Create a new document if it does not exist
+    // If no document exists, create a new one
     userTasks = await Task.create({ userEmail, tasks: [] });
   }
 
-  userTasks.tasks.push({
+  // Push the new task into the tasks array
+  const newTask = {
     title,
     description,
     dueDate,
     priority,
     status,
-  });
+  };
 
+  userTasks.tasks.push(newTask);
+
+  // Save the updated document
   await userTasks.save();
 
+  // Respond with the updated tasks array
   res.status(201).json(userTasks.tasks);
-};
+});
 
 // @desc Update a task
 // @route PATCH /tasks/:taskId
