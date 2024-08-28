@@ -72,10 +72,10 @@ const addTask = asyncHandler(async (req, res) => {
 // @desc Update a task
 // @route PATCH /tasks/:taskId
 // @access Private
-const updateTask = async (req, res) => {
+const updateTask = asyncHandler(async (req, res) => {
   const { userEmail } = req.query; // Get user email from query params
-  const { taskId } = req.params;
-  const updates = req.body;
+  const { taskId } = req.params; // Get task ID from route params
+  const updates = req.body; // Get updates from request body
 
   if (!userEmail || !taskId) {
     return res
@@ -83,40 +83,43 @@ const updateTask = async (req, res) => {
       .json({ message: "User email and task ID are required" });
   }
 
-  const userTasks = await Task.findOne({ userEmail });
+  try {
+    // Find the user's tasks document
+    const userTasks = await Task.findOne({ userEmail });
 
-  if (!userTasks) {
-    return res.status(404).json({ message: "Tasks not found for this user" });
+    if (!userTasks) {
+      return res.status(404).json({ message: "Tasks not found for this user" });
+    }
+
+    // Find the task to update
+    const taskIndex = userTasks.tasks.findIndex(
+      (task) => task._id.toString() === taskId
+    );
+
+    if (taskIndex === -1) {
+      return res.status(404).json({ message: "Task not found" });
+    }
+
+    // Update the task
+    Object.assign(userTasks.tasks[taskIndex], updates);
+
+    // Save the updated document
+    await userTasks.save();
+
+    // Respond with the updated task
+    res.json(userTasks.tasks[taskIndex]);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
   }
-
-  const taskIndex = userTasks.tasks.findIndex(
-    (task) => task._id.toString() === taskId
-  );
-
-  if (taskIndex === -1) {
-    return res.status(404).json({ message: "Task not found" });
-  }
-
-  // Update task details
-  Object.assign(userTasks.tasks[taskIndex], updates);
-
-  // Update history
-  userTasks.tasks[taskIndex].history.push({
-    action: "updated",
-    details: "Task updated with new data",
-  });
-
-  await userTasks.save();
-
-  res.json(userTasks.tasks[taskIndex]);
-};
+});
 
 // @desc Delete a task
 // @route DELETE /tasks/:taskId
 // @access Private
-const deleteTask = async (req, res) => {
+const deleteTask = asyncHandler(async (req, res) => {
   const { userEmail } = req.query; // Get user email from query params
-  const { taskId } = req.params;
+  const { taskId } = req.params; // Get task ID from route params
 
   if (!userEmail || !taskId) {
     return res
@@ -124,19 +127,34 @@ const deleteTask = async (req, res) => {
       .json({ message: "User email and task ID are required" });
   }
 
-  const userTasks = await Task.findOne({ userEmail });
+  try {
+    // Find the user's tasks document
+    const userTasks = await Task.findOne({ userEmail });
 
-  if (!userTasks) {
-    return res.status(404).json({ message: "Tasks not found for this user" });
+    if (!userTasks) {
+      return res.status(404).json({ message: "Tasks not found for this user" });
+    }
+
+    // Remove the task
+    const initialLength = userTasks.tasks.length;
+    userTasks.tasks = userTasks.tasks.filter(
+      (task) => task._id.toString() !== taskId
+    );
+
+    // Check if a task was deleted
+    if (userTasks.tasks.length === initialLength) {
+      return res.status(404).json({ message: "Task not found" });
+    }
+
+    // Save the updated document
+    await userTasks.save();
+
+    // Respond with a success message
+    res.json({ message: `Task with ID ${taskId} deleted` });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
   }
-
-  userTasks.tasks = userTasks.tasks.filter(
-    (task) => task._id.toString() !== taskId
-  );
-
-  await userTasks.save();
-
-  res.json({ message: `Task with ID ${taskId} deleted` });
-};
+});
 
 export { getTasks, addTask, updateTask, deleteTask };
