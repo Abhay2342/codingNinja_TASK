@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'https://codingninja-task.onrender.com/api/tasks'; // Ensure this URL matches your API
+  private apiUrl = 'https://codingninja-task.onrender.com/api/users/tasks'; // Ensure this URL matches your API
 
   constructor(private http: HttpClient) {}
 
