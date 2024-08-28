@@ -10,9 +10,13 @@ import {
 
 router
   .route("/")
-  .get(getTasks)
-  .post(addTask)
-  .patch(updateTask)
-  .delete(deleteTask);
+  .get(getTasks) // GET /tasks?userEmail=
+  .post(addTask); // POST /tasks
+
+// Route to update and delete a specific task by taskId
+router
+  .route("/:taskId")
+  .patch(updateTask) // PATCH /tasks/:taskId
+  .delete(deleteTask); // DELETE /tasks/:taskId
 
 export default router;
