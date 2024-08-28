@@ -161,3 +161,5 @@
 20240828	18:25:25	14936b7f-f34e-4a58-99ae-238d1130e2c6	GET	/api/users/tasks	http://localhost:4200
 20240828	18:25:34	ec678ba7-0140-4935-8c5a-0df672a29fb9	GET	/api/users/tasks	undefined
 20240828	18:25:35	2a042d4c-e184-44d7-b217-63d6b5a2adce	GET	/api/users/tasks	http://localhost:4200
+20240828	19:01:32	a3e2f5d1-fd10-438b-abf6-9586d9181471	OPTIONS	/api/auth/register	http://localhost:4200
+20240828	19:01:32	2194a2c4-daa6-4b63-8447-654af9776411	POST	/api/auth/register	http://localhost:4200

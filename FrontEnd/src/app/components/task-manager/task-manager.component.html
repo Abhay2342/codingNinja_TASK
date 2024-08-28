@@ -1,46 +1,47 @@
 <div class="task-manager">
-    <form (ngSubmit)="onSubmit(taskForm)" #taskForm="ngForm">
-        <h2>Create Task</h2>
-
-        <div>
-            <label for="title">Title:</label>
-            <input type="text" id="title" [(ngModel)]="task.title" name="title" required />
+    <div class="header">
+        <button class="logout-button" (click)="logout()">Logout</button>
+    </div>
+    <div class="container">
+        <div class="form-column">
+            <form (ngSubmit)="onSubmit(taskForm)" #taskForm="ngForm">
+                <h2>Create Task</h2>
+                <div>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" [(ngModel)]="task.title" name="title" required />
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea id="description" [(ngModel)]="task.description" name="description" required></textarea>
+                </div>
+                <div>
+                    <label for="dueDate">Due Date:</label>
+                    <input type="date" id="dueDate" [(ngModel)]="task.dueDate" name="dueDate" required />
+                </div>
+                <div>
+                    <label for="priority">Priority:</label>
+                    <select id="priority" [(ngModel)]="task.priority" name="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <button type="submit" [disabled]="!taskForm.form.valid">Add Task</button>
+            </form>
         </div>
 
-        <div>
-            <label for="description">Description:</label>
-            <textarea id="description" [(ngModel)]="task.description" name="description" required></textarea>
-        </div>
-
-        <div>
-            <label for="dueDate">Due Date:</label>
-            <input type="date" id="dueDate" [(ngModel)]="task.dueDate" name="dueDate" required />
-        </div>
-
-        <div>
-            <label for="priority">Priority:</label>
-            <select id="priority" [(ngModel)]="task.priority" name="priority">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-        </div>
-
-        <button type="submit" [disabled]="!taskForm.form.valid">Add Task</button>
-    </form>
-
-    <div class="task-list">
-        <h2>Your Tasks</h2>
-        <div *ngFor="let task of tasks">
-            <h3>{{ task.title }}</h3>
-            <p>{{ task.description }}</p>
-            <p>Due: {{ task.dueDate }}</p>
-            <p>Priority: {{ task.priority }}</p>
-            <p>Status: {{ task.status }}</p>
-
-            <button (click)="updateTaskStatus(task._id, 'in-progress')">Start</button>
-            <button (click)="updateTaskStatus(task._id, 'completed')">Complete</button>
-            <button (click)="deleteTask(task._id)">Delete</button>
+        <div class="task-list-column">
+            <h2>Your Tasks</h2>
+            <div *ngFor="let task of tasks">
+                <h3>{{ task.title }}</h3>
+                <p>{{ task.description }}</p>
+                <p>Due: {{ task.dueDate }}</p>
+                <p>Priority: {{ task.priority }}</p>
+                <p>Status: {{ task.status }}</p>
+                <button (click)="updateTaskStatus(task._id, 'in-progress')">Start</button>
+                <button (click)="updateTaskStatus(task._id, 'completed')">Complete</button>
+                <button (click)="deleteTask(task._id)">Delete</button>
+            </div>
         </div>
     </div>
 </div>

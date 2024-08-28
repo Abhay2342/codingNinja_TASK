@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
 import { CommonModule } from '@angular/common'; // Import CommonModule for ngFor
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-task-manager',
@@ -18,6 +19,7 @@ export class TaskManagerComponent {
     status: ''
   };
   tasks: any[] = []; // Initialize tasks array
+  constructor(private router: Router) {}
 
   onSubmit(taskForm: any) {
     if (taskForm.valid) {
@@ -34,4 +36,8 @@ export class TaskManagerComponent {
     const userEmail = 'example@example.com'; // Replace with actual user email
     // Delete task logic
   }
+  logout() {
+    localStorage.removeItem('userData');
+    this.router.navigate(['/login']);
+}
 }
