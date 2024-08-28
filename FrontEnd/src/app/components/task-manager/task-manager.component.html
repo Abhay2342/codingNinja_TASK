@@ -35,7 +35,7 @@
             <div *ngFor="let task of tasks">
                 <h3>{{ task.title }}</h3>
                 <p>{{ task.description }}</p>
-                <p>Due: {{ task.dueDate }}</p>
+                <p>Due: {{ task.dueDate | date }}</p>
                 <p>Priority: {{ task.priority }}</p>
                 <p>Status: {{ task.status }}</p>
                 <button (click)="updateTaskStatus(task._id, 'in-progress')">Start</button>

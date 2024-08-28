@@ -7,18 +7,18 @@ const router = express.Router();
 // @desc Get all tasks for a user
 // @route GET /tasks
 // @access Private
-const getTasks = async (req, res) => {
-  const { userEmail } = req.body;
+const getTasks = asyncHandler(async (req, res) => {
+  const { userEmail } = req.query; // Fetch userEmail from query parameters
 
   if (!userEmail) {
     return res.status(400).json({ message: "User email is required" });
   }
 
   try {
-    // Check if the tasks document for the given userEmail exists
+    // Find the tasks document associated with the given userEmail
     const userTasks = await Task.findOne({ userEmail }).lean();
 
-    // If no tasks found for the userEmail, return 404
+    // If no tasks found, return a 404 error
     if (!userTasks) {
       return res.status(404).json({ message: "No tasks found for this user" });
     }
@@ -30,7 +30,7 @@ const getTasks = async (req, res) => {
     console.error(error);
     res.status(500).json({ message: "Server error" });
   }
-};
+});
 
 // @desc Create a new task
 // @route POST /tasks

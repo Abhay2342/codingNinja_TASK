@@ -13,6 +13,7 @@ export class TaskService {
   getTasks(userEmail: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}?userEmail=${userEmail}`);
   }
+  
 
   createTask(task: any, userEmail: string): Observable<any> {
     return this.http.post<any>(this.apiUrl, { ...task, userEmail });

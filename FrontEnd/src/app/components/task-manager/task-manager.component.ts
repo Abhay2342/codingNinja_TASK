@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TaskService } from '../../services/task.service'; // Import the TaskService
 import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
 import { CommonModule } from '@angular/common'; // Import CommonModule for ngFor
+
 @Component({
   selector: 'app-task-manager',
   templateUrl: './task-manager.component.html',
@@ -11,7 +12,7 @@ import { CommonModule } from '@angular/common'; // Import CommonModule for ngFor
   standalone: true,
   imports: [FormsModule, CommonModule]
 })
-export class TaskManagerComponent {
+export class TaskManagerComponent implements OnInit {
   task = {
     title: '',
     description: '',
@@ -22,6 +23,29 @@ export class TaskManagerComponent {
   tasks: any[] = []; // Initialize tasks array
 
   constructor(private router: Router, private taskService: TaskService) {}
+
+  ngOnInit(): void {
+    this.loadTasks();
+  }
+
+  loadTasks() {
+    const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+    const userEmail = userData.email;
+
+    if (userEmail) {
+      this.taskService.getTasks(userEmail).subscribe({
+        next: (tasks) => {
+          this.tasks = tasks;
+        },
+        error: (err) => {
+          console.error('Error fetching tasks', err);
+        }
+      });
+    } else {
+      console.error('User email not found');
+      this.router.navigate(['/login']);
+    }
+  }
 
   onSubmit(taskForm: NgForm) {
     if (taskForm.valid) {
